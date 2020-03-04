@@ -2,7 +2,7 @@
 
 /********************************************************************************************
  * 1. CLI AVAILABLE COMMANDS FOR ARTISAN
- * https://laravel.com/docs/5.7/artisan
+ * https://laravel.com/docs/5.8/artisan
  ********************************************************************************************/
 
 // 1.1. MAIN.
@@ -136,3 +136,335 @@ php artisan vendor:publish       // Publish any publishable assets from vendor p
 
 php artisan view:cache           // Compile all of the application's Blade templates
 php artisan view:clear           // Clear all compiled view files
+
+/********************************************************************************************
+ * 2. REQUEST
+ * https://laravel.com/api/5.8/Illuminate/Http/Request.html
+ * https://laravel.com/docs/5.8/requests
+ ********************************************************************************************/
+
+
+
+/********************************************************************************************
+ * 3. RESPONSE
+ * https://laravel.com/api/5.8/Illuminate/Http/Response.html
+ * https://laravel.com/docs/5.8/responses
+ ********************************************************************************************/
+
+
+
+/********************************************************************************************
+ * 4. ROUTING
+ * https://laravel.com/docs/5.8/routing
+ ********************************************************************************************/
+
+
+
+ /********************************************************************************************
+ * 5. MIDDLEWARE
+ * https://laravel.com/docs/5.8/middleware
+ ********************************************************************************************/
+
+
+/********************************************************************************************
+ * 6. CONTROLLERS
+ * https://laravel.com/docs/5.8/controllers
+ ********************************************************************************************/
+
+
+
+/********************************************************************************************
+ * 7. SESSION
+ * https://laravel.com/docs/5.8/session
+ ********************************************************************************************/
+
+
+
+/********************************************************************************************
+ * 8. URL GENERATION
+ * https://laravel.com/docs/5.8/urls
+ ********************************************************************************************/
+
+
+
+/********************************************************************************************
+ * 9. VALIDATION
+ * https://laravel.com/docs/5.8/validation
+ ********************************************************************************************/
+
+accepted                               // The field under validation must be yes, on, 1, or true.
+active_url                             // The field under validation must have a valid A or AAAA record according to the dns_get_record PHP function.
+after:date                             // The field under validation must be a value after a given date.
+after_or_equal:date                    // The field under validation must be a value after or equal to the given date.
+alpha                                  // The field under validation must be entirely alphabetic characters.
+alpha_dash                             // The field under validation may have alpha-numeric characters, as well as dashes and underscores.
+alpha_num                              // The field under validation must be entirely alpha-numeric characters.
+array                                  // The field under validation must be a PHP array.
+bail                                   // Stop running validation rules after the first validation failure.
+before:date                            // The field under validation must be a value preceding the given date.
+before_or_equal:date                   // The field under validation must be a value preceding or equal to the given date.
+between:min,max                        // The field under validation must have a size between the given min and max.
+boolean                                // The field under validation must be able to be cast as a boolean. Accepted input are true, false, 1, 0, "1", and "0".
+confirmed                              // The field under validation must have a matching field of foo_confirmation.
+date                                   // The field under validation must be a valid, non-relative date according to the strtotime PHP function.
+date_equals:date                       // The field under validation must be equal to the given date.
+date_format:format                     // The field under validation must match the given format.
+different:field                        // The field under validation must have a different value than field.
+digits:value                           // The field under validation must be numeric and must have an exact length of value.
+digits_between:min,max                 // The field under validation must have a length between the given min and max.
+dimensions                             // The file under validation must be an image meeting the dimension constraints as specified by the rule's parameters.
+distinct                               // When working with arrays, the field under validation must not have any duplicate values.
+email                                  // The field under validation must be formatted as an e-mail address.
+ends_with:foo,bar,...                  // The field under validation must end with one of the given values.
+exists:table,column                    // The field under validation must exist on a given database table.
+file                                   // The field under validation must be a successfully uploaded file.
+filled                                 // The field under validation must not be empty when it is present.
+gt:field                               // The field under validation must be greater than the given field.
+gte:field                              // The field under validation must be greater than or equal to the given field.
+image                                  // The file under validation must be an image (jpeg, png, bmp, gif, svg, or webp)
+in:foo,bar,...                         // The field under validation must be included in the given list of values.
+in_array:anotherfield.*                // The field under validation must exist in anotherfield's values.
+integer                                // The field under validation must be an integer.
+ip                                     // The field under validation must be an IP address.
+ipv4                                   // The field under validation must be an IPv4 address.
+ipv6                                   // The field under validation must be an IPv6 address.
+json                                   // The field under validation must be a valid JSON string.
+lt:field                               // The field under validation must be less than the given field.
+lte:field                              // The field under validation must be less than or equal to the given field.
+max:value                              // The field under validation must be less than or equal to a maximum value.
+mimetypes:text/plain,...               // The file under validation must match one of the given MIME types:
+mimes:foo,bar,...                      // The file under validation must have a MIME type corresponding to one of the listed extensions.
+min:value                              // The field under validation must have a minimum value.
+not_in:foo,bar,...                     // The field under validation must not be included in the given list of values.
+not_regex:pattern                      // The field under validation must not match the given regular expression.
+nullable                               // The field under validation may be null.
+numeric                                // The field under validation must be numeric.
+present                                // The field under validation must be present in the input data but can be empty.
+regex:pattern                          // The field under validation must match the given regular expression.
+required                               // The field under validation must be present in the input data and not empty.
+required_if:anotherfield,value,...     // The field under validation must be present and not empty if the anotherfield field is equal to any value.
+required_unless:anotherfield,value,... // The field under validation must be present and not empty unless the anotherfield field is equal to any value.
+required_with:foo,bar,...              // The field under validation must be present and not empty only if any of the other specified fields are present.
+required_with_all:foo,bar,...          // The field under validation must be present and not empty only if all of the other specified fields are present.
+required_without:foo,bar,...           // The field under validation must be present and not empty only when any of the other specified fields are not present.
+required_without_all:foo,bar,...       // The field under validation must be present and not empty only when all of the other specified fields are not present.
+same:field                             // The given field must match the field under validation.
+size:value                             // The field under validation must have a size matching the given value.
+starts_with:foo,bar,...                // The field under validation must start with one of the given values.
+string                                 // The field under validation must be a string.
+timezone                               // The field under validation must be a valid timezone identifier according to the timezone_identifiers_list PHP function.
+unique:table,column,except,idColumn    // The field under validation must not exist within the given database table.
+url                                    // The field under validation must be a valid URL.
+uuid                                   // The field under validation must be a valid RFC 4122 (version 1, 3, 4, or 5) universally unique identifier (UUID).
+
+/********************************************************************************************
+ * 10. ERROR HANDLING
+ * https://laravel.com/docs/5.8/errors
+ ********************************************************************************************/
+
+
+
+/********************************************************************************************
+ * 11. LOGGING
+ * https://laravel.com/docs/5.8/logging
+ ********************************************************************************************/
+
+
+/********************************************************************************************
+ * 12. COLLECTIONS
+ * https://laravel.com/docs/5.7/collections
+ ********************************************************************************************/
+
+all
+average
+avg
+chunk
+collapse
+combine
+concat
+contains
+containsStrict
+count
+crossJoin
+dd
+diff
+diffAssoc
+diffKeys
+dump
+each
+eachSpread
+every
+except
+filter
+first
+firstWhere
+flatMap
+flatten
+flip
+forget
+forPage
+get
+groupBy
+has
+implode
+intersect
+intersectByKeys
+isEmpty
+isNotEmpty
+keyBy
+keys
+last
+macro
+make
+map
+mapInto
+mapSpread
+mapToGroups
+mapWithKeys
+max
+median
+merge
+min
+mode
+nth
+only
+pad
+partition
+pipe
+pluck
+pop
+prepend
+pull
+push
+put
+random
+reduce
+reject
+reverse
+search
+shift
+shuffle
+slice
+some
+sort
+sortBy
+sortByDesc
+sortKeys
+sortKeysDesc
+splice
+split
+sum
+take
+tap
+times
+toArray
+toJson
+transform
+union
+unique
+uniqueStrict
+unless
+unlessEmpty
+unlessNotEmpty
+unwrap
+values
+when
+whenEmpty
+whenNotEmpty
+where
+whereStrict
+whereBetween
+whereIn
+whereInStrict
+whereInstanceOf
+whereNotBetween
+whereNotIn
+whereNotInStrict
+wrap
+zip
+
+/********************************************************************************************
+ * 13. HTTP TESTS
+ * https://laravel.com/docs/5.7/http-tests
+ ********************************************************************************************/
+
+$response->assertStatus($code);                            // Assert that the response has a given code.
+$response->assertForbidden();                              // Assert that the response has a forbidden status code.
+$response->assertNotFound();                               // Assert that the response has a not found status code.
+$response->assertOk();                                     // Assert that the response has a 200 status code.
+$response->assertSuccessful();                             // Assert that the response has a successful status code.
+$response->assertRedirect($uri);                           // Assert that the response is a redirect to a given URI.
+
+$response->assertHeader($headerName, $value = null);       // Assert that the given header is present on the response.
+$response->assertHeaderMissing($headerName);               // Assert that the given header is not present on the response.
+
+$response->assertExactJson(array $data);                   // Assert that the response contains an exact match of the given JSON data.
+$response->assertJson(array $data);                        // Assert that the response contains the given JSON data.
+$response->assertJsonCount($count, $key = null);           // Assert that the response JSON has an array with the expected number of items at the given key.
+$response->assertJsonFragment(array $data);                // Assert that the response contains the given JSON fragment.
+$response->assertJsonMissing(array $data);                 // Assert that the response does not contain the given JSON fragment.
+$response->assertJsonMissingExact(array $data);            // Assert that the response does not contain the exact JSON fragment.
+$response->assertJsonMissingValidationErrors($keys);       // Assert that the response has no JSON validation errors for the given keys.
+$response->assertJsonStructure(array $structure);          // Assert that the response has a given JSON structure.
+$response->assertJsonValidationErrors($keys);              // Assert that the response has the given JSON validation errors for the given keys.
+
+$response->assertDontSee($value);                          // Assert that the given string is not contained within the response.
+$response->assertDontSeeText($value);                      // Assert that the given string is not contained within the response text.
+$response->assertSee($value);                              // Assert that the given string is contained within the response.
+$response->assertSeeInOrder(array $values);                // Assert that the given strings are contained in order within the response.
+$response->assertSeeText($value);                          // Assert that the given string is contained within the response text.
+$response->assertSeeTextInOrder(array $values);            // Assert that the given strings are contained in order within the response text.
+
+$response->assertCookie($cookieName, $value = null);       // Assert that the response contains the given cookie.
+$response->assertCookieExpired($cookieName);               // Assert that the response contains the given cookie and it is expired.
+$response->assertCookieNotExpired($cookieName);            // Assert that the response contains the given cookie and it is not expired.
+$response->assertCookieMissing($cookieName);               // Assert that the response does not contains the given cookie.
+$response->assertPlainCookie($cookieName, $value = null);  // Assert that the response contains the given cookie (unencrypted).
+
+$response->assertSessionHas($key, $value = null);                                             // Assert that the session contains the given piece of data.
+$response->assertSessionHasAll(array $data);                                                  // Assert that the session has a given list of values.
+$response->assertSessionHasErrors(array $keys, $format = null, $errorBag = 'default');        // Assert that the session contains an error for the given field.
+$response->assertSessionHasErrorsIn($errorBag, $keys = [], $format = null);                   // Assert that the session has the given errors.
+$response->assertSessionHasNoErrors();                                                        // Assert that the session has no errors.
+$response->assertSessionDoesntHaveErrors($keys = [], $format = null, $errorBag = 'default');  // Assert that the session has no errors for the given keys.
+$response->assertSessionMissing($key);                                                        // Assert that the session does not contain the given key.
+
+$response->assertViewHas($key, $value = null);             // Assert that the response view was given a piece of data.
+$response->assertViewHasAll(array $data);                  // Assert that the response view has a given list of data.
+$response->assertViewIs($value);                           // Assert that the given view was returned by the route.
+$response->assertViewMissing($key);                        // Assert that the response view is missing a piece of bound data.
+
+$this->assertAuthenticated($guard = null);                           // Assert that the user is authenticated.
+$this->assertGuest($guard = null);                                   // Assert that the user is not authenticated.
+$this->assertAuthenticatedAs($user, $guard = null);                  // Assert that the given user is authenticated.
+$this->assertCredentials(array $credentials, $guard = null);         // $this->assertCredentials(array $credentials, $guard = null).
+$this->assertInvalidCredentials(array $credentials, $guard = null);  // Assert that the given credentials are invalid.
+
+/********************************************************************************************
+ * 14. LARAVEL VALET COMMANDS
+ * https://laravel.com/docs/6.0/valet
+ ********************************************************************************************/
+
+valet install     // Install the Valet daemon.
+valet uninstall   // Uninstall the Valet daemon.
+valet use php@7.2 // Allows you to switch between php versions.
+
+valet start       // Start the Valet daemon.
+valet stop        // Stop the Valet daemon.
+valet restart     // Restart the Valet daemon.
+
+valet park        // Register your current working directory as a path which Valet should search for sites.
+valet forget      // Run this command from a "parked" directory to remove it from the parked directory list.
+valet paths       // View all of your "parked" paths.
+
+valet link <name>   // Link a single site in the current directory and not the entire directory.
+valet unlink <name> // Unlink a single site in the current directory
+valet links         // View all of your "linked" paths.
+
+valet secure      // Serve site into https
+valet unsecure    // Revert back to http
+
+valet log          // View a list of logs which are written by Valet's services.
+valet trust        // Add sudoers files for Brew and Valet to allow Valet commands to be run without prompting for passwords.
+valet tld <suffix> // Update tld for your domains (default to test).
+valet share        // Share your site with the world.
